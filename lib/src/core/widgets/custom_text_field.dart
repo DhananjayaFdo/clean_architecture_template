@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 import '../../config/theme/app_theme.dart';
@@ -75,9 +77,9 @@ class _ChangePassTextFieldState extends State<ChangePassTextField> {
         //prefix icon
         prefixIcon: widget.isPrefix
             ? Icon(
-          widget.prefixIcon,
-          color: Colors.white,
-        )
+                widget.prefixIcon,
+                color: Colors.white,
+              )
             : null,
 
         //label text
@@ -98,22 +100,22 @@ class _ChangePassTextFieldState extends State<ChangePassTextField> {
 
         //error text style
         errorStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
-          fontSize: 12,
-          color: Colors.red,
-        ),
+              fontSize: 12,
+              color: Colors.red,
+            ),
 
         //suffix icon
         suffixIcon: widget.isPassword
             ? IconButton(
-          onPressed: () {
-            setState(() {
-              widget.obscureText = !widget.obscureText;
-            });
-          },
+                onPressed: () {
+                  setState(() {
+                    widget.obscureText = !widget.obscureText;
+                  });
+                },
 
-          //text obscure
-          icon: widget.obscureText ? const Icon(Icons.visibility_off, size: 20, color: AppTheme.white) : const Icon(Icons.visibility, size: 20, color: AppTheme.white),
-        )
+                //text obscure
+                icon: widget.obscureText ? const Icon(Icons.visibility_off, size: 20, color: AppTheme.white) : const Icon(Icons.visibility, size: 20, color: AppTheme.white),
+              )
             : null,
       ),
     );
